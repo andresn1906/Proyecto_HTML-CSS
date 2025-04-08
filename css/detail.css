@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap'); /* Importación de la fuente "Encode Sans" desde Google Fonts */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /* Estilos globales: se eliminan márgenes y rellenos por defecto, y se usa border-box para un manejo más intuitivo del tamaño */
+
+body{
+    font-family: "Encode Sans", sans-serif;
+    margin: 15px;
+} /* Se establece la fuente general y un margen para el contenido del body */
+
+.product-header{
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+} /* Imagen principal del producto con bordes redondeados y ajustada al contenedor */
+
+.arrow{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+} /* Flecha de regreso en la parte superior izquierda del producto */
+
+.heart{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+} /* Icono de corazón en la parte superior derecha para marcar como favorito */
+
+.product_info{
+    h4{
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+} /* Título del producto con mayor peso visual */
+
+.product-add{
+    margin-left: 260px;
+    margin-top: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    a{
+        color: black;
+    }
+    h3{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    i{
+        font-size: 25px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 0.5px 3px;
+        text-align: center;
+        border: 1px solid rgba(165, 165, 165, 0.505);
+    }
+} /* Sección para agregar productos con botones estilizados */
+
+.product-review{
+    display: flex;
+    margin: 10px 0px 20px 0px;
+    h3{
+        margin-top: 1px;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(0, 38, 255);
+        margin-left: 3px;
+    }
+} /* Reseñas del producto mostradas junto al título o rating */
+
+.product-description{
+    width: 90%;
+    font-size: 14px;
+    color: #6d6d6d;
+    position: relative;
+    margin-bottom: 15px;
+} /* Descripción del producto con estilo tenue */
+
+.read_more{
+    color: black;
+    font-weight: 650;
+    font-size: 15px;
+    margin-left: 5px;
+} /* Botón para expandir la descripción */
+
+#toggle-text{
+    display: none;
+} /* Input oculto que controla si se muestra el texto adicional */
+
+.product-description_text {
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    height: 70px;
+    transition: height 0.4s ease;
+} /* Caja de texto que se expande al hacer clic */
+
+.more_text{
+    display: none;
+} /* Texto extra inicialmente oculto */
+
+#toggle-text:checked + .product-description_text{
+    height: auto;
+}
+#toggle-text:checked + .product-description_text .more_text{
+    display: inline;
+}
+#toggle-text:checked + .product-description_text .read_more{
+    display: none;
+} /* Comportamiento cuando se activa el toggle: se muestra el resto del texto */
+
+.product-choose_options{
+    h4{
+        margin-bottom: 15px;
+    }
+} /* Título de la sección de opciones (por ejemplo, tallas) */
+
+.button{
+    display: inline;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(165, 165, 165, 0.637);
+    text-decoration: none;
+    color: black;
+} /* Botones redondeados para seleccionar opciones */
+
+.button:nth-child(2){ padding: 5px 11px; }
+.button:nth-child(3){ padding: 5px 8px; }
+.button:nth-child(4){ padding: 5px 11px; }
+.button:nth-child(5){ padding: 5px 6px; } /* Ajustes de padding específicos por botón */
+
+.button:focus{
+    background-color: rgb(40, 40, 40);
+    color: white;
+} /* Estilo al seleccionar un botón */
+
+.light_grey, .grey, .black{
+    border-radius: 50%;
+    padding: 5px 13px;
+    border: 1px solid;
+} /* Estilo general para los colores disponibles */
+
+.light_grey{
+    background-color: rgb(116, 116, 116);
+    color: rgb(116, 116, 116);
+    border-color: rgb(116, 116, 116);
+}
+.grey{
+    background-color: rgb(59, 59, 59);
+    color: rgb(59, 59, 59);
+    border-color: rgb(59, 59, 59);
+}
+.black{
+    background-color: black;
+    color: black;
+    border-color: black;
+}
+
+.control_options{
+    display: flex;
+} /* Contenedor para agrupar las opciones de selección */
+
+.product-color_options{
+    margin-left: 100px;
+    h4{
+        margin-bottom: 15px;
+    }
+} /* Opciones para elegir color del producto */
+
+.cart{
+    background-color: rgb(40, 40, 40);
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-top: 25px;
+    text-align: center;
+    a{
+        color: white;
+        font-size: 17px;
+        text-decoration: none;
+    }
+} /* Botón de agregar al carrito */
+
+.subtext{
+    font-size: 14px;
+    color: #b3b3b3;
+    margin-top: 5px;
+    text-align: center;
+} /* Texto pequeño bajo el botón de carrito, típicamente para información adicional */
+
+@media (min-width: 1000px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .container-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 65%;
+            height: 95%;
+            border-radius: 25px;
+        }
+    }
+    .arrow{
+        top: 50px;
+        left: 170px;
+    }
+    .heart{
+        top: 50px;
+        right: 930px;
+    }
+    .control_options{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .product-color_options{
+        margin-left: 400px;
+    }
+    .product-add{
+        margin-left: 400px;
+    }
+} /* Estilos para pantallas grandes */
+
+@media (max-width: 999px) and (min-width: 500px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .container-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 65%;
+            height: 95%;
+            border-radius: 25px;
+        }
+    }
+    .arrow{
+        top: 40px;
+        left: 140px;
+    }
+    .heart{
+        top: 40px;
+        right: 140px;
+    }
+    .control_options{
+        margin-bottom: 10px;
+    }
+    .product-color_options{
+        margin-left: 300px;
+    }
+    .product-add{
+        margin-left: 400px;
+    }
+} /* Estilos para pantallas medianas (tablets) */

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap'); /* Importa la fuente "Encode Sans" desde Google Fonts para usarla en toda la página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /* Resetea los márgenes y rellenos por defecto y utiliza el modelo de caja border-box para facilitar el diseño */
+
+body{
+    font-family: "Encode Sans", sans-serif;
+    margin: 15px;
+} /* Aplica la fuente importada al cuerpo del documento y agrega un margen general de 15px */
+
+.product{
+    display: flex;
+    margin-top: 20px;
+    img{
+        width: 80px;
+        height: 90px;
+        border-radius: 20% 20%;
+        object-fit: cover;
+    }
+} /* Define el contenedor del producto con un diseño en fila y ajusta el tamaño y forma de la imagen */
+
+.product-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    h3{
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    p{
+        font-size: 12px;
+        margin-top: 10px;
+        color: rgb(100, 100, 100);
+    }
+    h4{
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+} /* Estiliza los detalles del producto: título, descripción y precio, con espaciado y jerarquía visual */
+
+.quantity{
+    margin-left: 195px;
+    margin-top: 85px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    a{
+        color: black;
+    }
+    h4{
+        margin-bottom: 7px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    i{
+        font-size: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 0.5px 3px;
+        text-align: center;
+        border: 1px solid rgba(165, 165, 165, 0.505);
+    }
+} /* Muestra la cantidad seleccionada de productos con iconos y estilo redondeado */
+
+.dots, .dots1, .dots2, .dots3{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 0.5px 3px;
+    text-align: center;
+    border: 1px solid rgba(165, 165, 165, 0.505);
+} /* Define los estilos comunes para los iconos de opciones (posiblemente más acciones) ubicados a la derecha de cada producto */
+.dots{ top: 85px; left: 350px; }
+.dots1{ top: 200px; left: 350px; }
+dots2{ top: 305px; left: 350px; }
+dots3{ top: 410px; left: 350px; }
+
+.container-header{
+    margin-bottom: 30px;
+    h3{
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 10px;
+        text-align: center;
+    }
+} /* Estiliza el encabezado principal del contenedor con un título centrado */
+
+.container-header .left{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 5px 7px;
+    text-align: center;
+    border: 1px solid rgba(165, 165, 165, 0.505);
+    a{
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+        i{
+            font-size: 20px;
+        }
+    }
+} /* Botón de retroceso u opción lateral, ubicado arriba a la izquierda */
+
+.container-header .list{
+    position: absolute;
+    top: 10px;
+    left: 340px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 5px 8px;
+    text-align: center;
+    border: 1px solid rgba(165, 165, 165, 0.505);
+    a{
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+        i{
+            font-size: 20px;
+        }
+    }
+} /* Icono tipo "menú" o "lista", ubicado arriba a la derecha en pantallas grandes */
+
+.container-shipping_information{
+    margin-top: 30px;
+    text-align: center;
+} /* Sección que contiene la información de envío centrada */
+
+.header{
+    h3{
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    img{
+        margin-bottom: 30px;
+    }
+} /* Título y posible imagen decorativa en la parte superior del resumen de compra o sección de información */
+
+.billing_items h3{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+} /* Título para los ítems de facturación */
+
+.billing_item1, .billing_item2, .billing_item3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+} /* Estilos consistentes para cada ítem en el resumen de facturación (precio, envío, impuestos) */
+
+.billing_total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-top: 25px;
+    h3{
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 10px;
+        text-align: center;
+    }
+} /* Muestra el total a pagar con énfasis visual similar al resto de ítems */
+
+.paying{
+    background-color: rgb(40, 40, 40);
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-top: 25px;
+    text-align: center;
+    a{
+        color: white;
+        font-size: 17px;
+        text-decoration: none;
+    }
+} /* Estiliza el botón de pago con colores contrastantes y diseño atractivo */
+
+@media (min-width: 1000px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px; 
+        align-items: start; 
+    } /* En pantallas grandes, divide el contenedor en dos columnas */
+
+    .container-header .list{
+        position: absolute;
+        top: 10px;
+        left: 340px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 5px 8px;
+        text-align: center;
+        border: 1px solid rgba(165, 165, 165, 0.505);
+        a{
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+            i{
+                font-size: 20px;
+            }
+        }
+    } /* Ajuste específico para el ícono de lista en pantallas grandes */
+
+    .container-header{
+        margin-bottom: 30px;
+        h3{
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-right: 230px;
+            text-align: center;
+        }
+    } /* Ajuste del encabezado en pantallas grandes, centrando mejor el título */
+
+    .container-shipping_information .header{
+        img{
+            width: 90%;
+            height: auto;
+        }
+    } /* Escalado de imagen en sección de envío para pantallas grandes */
+}
+
+@media (max-width: 999px) and (min-width: 500px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    } /* Para pantallas medianas, usa una sola columna con espacio entre elementos */
+
+    .container-header{
+        margin-bottom: 30px;
+        h3{
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            text-align: center;
+        }
+    } /* Ajuste del encabezado para pantallas medianas */
+
+    .container-header .left{
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 5px 7px;
+        text-align: center;
+        border: 1px solid rgba(165, 165, 165, 0.505);
+        a{
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+            i{
+                font-size: 20px;
+            }
+        }
+    } /* Botón de retroceso para pantallas medianas */
+
+    .container-header .list{
+        position: absolute;
+        top: 10px;
+        left: 630px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 5px 8px;
+        text-align: center;
+    } /* Ajuste de ubicación del icono de lista en pantallas medianas */
+}
